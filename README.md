@@ -1,8 +1,5 @@
 AI Behavioral Interview Tutor
 Live Demo
-Application URL: http://10.230.100.222:23340/
-
-(Please Note: This link requires access to the University Cluster/VPN).
 
 Project Overview
 The AI Behavioral Interview Tutor is an interactive application designed to help job seekers practice for behavioral interviews. It uses a Large Language Model (LLM) to analyze user prompts and generate structured responses using industry-standard frameworks (STAR and SOAR).
@@ -16,12 +13,17 @@ We built an interactive chatbot that:
 
 Analyzes Intent: Identifies if a question is a standard behavioral prompt or a strategic failure/obstacle question.
 Selects Framework: Automatically routes to STAR (for standard stories) or SOAR (for strategic challenges).
+
 Generates Structure: Streams a token-by-token sample response to guide the user.
+
+
 Key Features
 Intelligent Framework Selection: automatically detects if a question is best answered using STAR (Standard) or SOAR (Strategic/Failure-based) frameworks.
 Real-time Streaming: Answers are streamed token-by-token for a responsive user experience.
+
 Context Awareness: Maintains chat history to provide context-aware feedback.
 Dockerized Deployment: Fully containerized using Docker for consistent deployment on the university cluster.
+
 Tech Stack
 Frontend: Streamlit (Python-based UI)
 Backend Logic: Python 3.12
