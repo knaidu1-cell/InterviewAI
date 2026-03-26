@@ -1,0 +1,10 @@
+services:
+  streamlit:
+    build:
+      context: ./streamlit_app
+      dockerfile: Dockerfile
+    container_name: "${CONTAINER_NAME}"
+    restart: always
+    env_file: .env
+    ports:
+      - "${APPLICATION_PORT}:8501"

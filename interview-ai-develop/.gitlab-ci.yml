@@ -1,0 +1,35 @@
+stages:
+  - build
+  - deploy
+
+variables:
+  APPLICATION_NAME: "Interview AI Tutor"
+  CONTAINER_NAME: "interview-ai-app"
+
+# Build Job
+build-job:
+  stage: build
+  tags:
+    - compute
+  script:
+    - echo "Building Streamlit App..."
+
+# Deploy Job
+deploy-job:
+  stage: deploy
+  tags:
+    - compute
+  script:
+    - echo "Deploying to Server..."
+    - cd $CI_PROJECT_DIR
+    - chmod +x configure.sh container-compose.sh
+    # This script will now create the .env file with your PORT
+    - ./configure.sh
+    - ./container-compose.sh down || true
+    - ./container-compose.sh build
+    - ./container-compose.sh up -d
+  environment:
+    name: development
+  only:
+    - main
+    - develop
