@@ -20,9 +20,14 @@ Function: It records user prompts and AI responses, allowing the "History" featu
 Project Structure
 interview-ai/
 streamlit_app/
-app.py             # Main application logic
-Dockerfile         # Container build instructions
-requirements.txt   # Python dependencies
-gitlab-ci.yml         # CI/CD pipeline configuration
-docker-compose.yml     # Service orchestration
-configure.sh           # Environment setup script
+app.py# Main application logic
+
+Dockerfile# Container build instructions
+
+requirements.txt# Python dependencies
+
+gitlab-ci.yml # CI/CD pipeline configuration
+
+docker-compose.yml# Service orchestration
+
+configure.sh# Environment setup script
